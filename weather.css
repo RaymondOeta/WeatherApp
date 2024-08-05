@@ -1,0 +1,136 @@
+:root{
+  --title-font: "Space Grotesk", sans-serif;
+  --text-font: "Poppins", sans-serif;
+  --primary-color: #173B45;
+  --secondary-color: #FF8225;
+  --colorless: rgba(255, 255, 255, .2);
+  --text-color: #000;
+  --title-color: #fff;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  font-family: var(--text-font);
+  box-sizing: border-box;
+  color: var(--title-color);
+}
+
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: var(--primary-color);
+  background: url("./media/background.jpg");
+  overflow: hidden;
+}
+
+#greeting{
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  color: var(--title-color);
+  top: 30%;
+  bottom: 100%;
+  display: flex;
+}
+
+.card{
+  background: #000000d0;
+  color: white;
+  padding: 2em;
+  border-radius: 30px;
+  width: 100%;
+  max-width: 420px;
+  margin: 2em;
+}
+
+.search{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button{
+  margin: 0.5rem;
+  border-radius: 50%;
+  border: none;
+  height: 44px;
+  width: 44px;
+  outline: none;
+  background: #7c7c7c2b;
+  color: white;
+  cursor: pointer;
+  transition: .2s ease-in-out;
+}
+
+input.search-bar{
+  border: none;
+  outline: none;
+  padding: .4em 1em;
+  border-radius: 24px;
+  font-size: 18px;
+  background: #7c7c7c2b;
+  color: white;
+  width: calc(100% - 100px);
+  font-family: inherit;
+  transition: .2s ease-in-out;
+}
+
+input.search-bar:hover{
+  background: var(--secondary-color);
+}
+
+input.search-bar::placeholder{
+  color: white;
+}
+
+button:hover{
+  background: var(--secondary-color);
+}
+
+h1.temp{
+  margin: 0;
+  margin-bottom: .4em;
+}
+
+.flex{
+  display: flex;
+  align-items: center;
+}
+
+.description{
+  text-transform: capitalize;
+  margin-left: 8px;
+}
+
+.weather .loading{
+  visibility: hidden;
+  max-height: 20px;
+  position: relative;
+}
+
+.weather.loading:after{
+  visibility: visible;
+  content: "Loading. Please wait...";
+  color: white;
+  position: absolute;
+  top: 0;
+  left: 20px;
+}
+
+footer{
+  text-align: center;
+  font-size: 14px;
+  margin-top: 50px;
+  margin-bottom: 30px;
+  position: absolute;
+  bottom: 20px;
+}
+
+@media only screen and (max-width: 620px){
+  .container{
+    width: 100%;
+  }
+}
